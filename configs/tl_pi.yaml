@@ -1,0 +1,19 @@
+model:
+  use_flash_attention: true
+  nope: false
+  scale_type: linear
+
+data:
+  eval_metric: pos
+
+training:
+  save_model: true
+  # global bs 64
+  gradient_accumulation_steps: 1 # 8 GPUs
+  per_device_train_batch_size: 1
+  per_device_eval_batch_size: 1
+  max_steps: 200
+  eval_steps: 10000
+
+  warmup_ratio: 0.1 # PI
+  weight_decay: 0

@@ -1,0 +1,13 @@
+accelerate
+datasets
+deepspeed
+einops  # flash attention
+evaluate
+objprint
+peft
+scikit-learn
+seaborn
+sentencepiece
+simple-parsing
+tensorboard
+transformers==4.35

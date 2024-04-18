@@ -1,0 +1,12 @@
+model:
+  use_flash_attention: false
+  output_attentions: true
+
+data:
+  eval_metric: entropy
+
+training:
+  do_train: false
+  do_eval: true
+  per_device_eval_batch_size: 8
+  deepspeed: ""

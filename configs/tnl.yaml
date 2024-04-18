@@ -1,0 +1,18 @@
+model:
+  model_name_or_path: ckpts/tnl
+  tokenizer_name: ""
+  torch_dtype: float16
+  use_flash_attention: true
+  origin_nope: true
+  extend_nope: true
+
+data:
+  block_size: 16384
+  dataset_path: /data/slim_star_combined
+  is_tiny_llama: true
+  # max_train_samples: 1000
+  max_dev_samples: 1000
+
+training:
+  max_steps: 1000
+  dataloader_num_workers: 1

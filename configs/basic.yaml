@@ -1,0 +1,46 @@
+training:
+  ### basics ###
+  do_train: True
+  # do_eval: True
+  per_device_train_batch_size: null
+  # auto_find_batch_size: True
+  per_device_eval_batch_size: null
+  num_train_epochs: 1
+  dataloader_num_workers: 4
+  weight_decay: 0.01
+  max_grad_norm: 1 # default
+  # optim: adamw_torch
+  adam_beta1: 0.9
+  adam_beta2: 0.95
+  learning_rate: null
+  lr_scheduler_type: cosine
+  warmup_ratio: 0.05 # LLaMA uses 0.8% (2k steps over 250k)
+  ### ckpts ###
+  output_dir: null
+  overwrite_output_dir: True
+  save_model: false # extended arg
+  save_strategy: "no"
+  # save_steps: 500
+  # save_total_limit: 1
+  resume_from_checkpoint: False
+  # load_best_model_at_end: False
+  ### logging ###
+  # logging_dir:  # use default: output_dir/runs
+  logging_steps: 1
+  logging_first_step: True
+  evaluation_strategy: steps
+  eval_steps: 50 # default to logging_steps
+  eval_accumulation_steps: 16
+  ### efficiency ###
+  # torch_compile: True
+  bf16: True
+  # fp16: True
+  gradient_accumulation_steps: null
+  gradient_checkpointing: false
+  ### distributed training ###
+  # fsdp: shard_grad_op
+  # fsdp_config: configs/fsdp.json
+  deepspeed: configs/ds_config.json
+  ### debug ###
+  # max_steps: 3
+  # skip_memory_metrics: False
