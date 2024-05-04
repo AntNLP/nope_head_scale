@@ -8,11 +8,11 @@ The paper is currently under ARR 2024 Feb review.
 
 ### NoPE Pretained Model
 
-Coming soon
+https://huggingface.co/AntNLP/TinyLlama-NoPE-1.1B
 
 ### Head Scale NoPE Model
 
-Coming soon
+https://huggingface.co/AntNLP/TinyLlama-NoPE-HeadScale8k
 
 ## Reproduction
 
@@ -105,7 +105,7 @@ For more instructions, please follow [the official repo](https://github.com/THUD
 
 ### Reproducing RoPE baselines
 
-Finetuning RoPE length generation models:
+Finetuning RoPE length generalization models:
 
 ```bash
 ./script/run_pi.sh
@@ -122,5 +122,12 @@ Then modify the evaluation script and run. See examples in the script.
 ## Citation
 
 ```text
-Coming soon
+@misc{wang2024length,
+      title={Length Generalization of Causal Transformers without Position Encoding}, 
+      author={Jie Wang and Tao Ji and Yuanbin Wu and Hang Yan and Tao Gui and Qi Zhang and Xuanjing Huang and Xiaoling Wang},
+      year={2024},
+      eprint={2404.12224},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
